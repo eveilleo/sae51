@@ -15,25 +15,27 @@ TABLE Logiciels_Installes {
 }
 
 TABLE Logiciels {
-    LogicielID INT
+    LogicielID INT [primary key]
     Nom VARCHAR(200)
 }
 
 TABLE Marques {
-    MarqueID INT
+    MarqueID INT [primary key]
     Nom VARCHAR(200)
 }
 
 TABLE Users {
-    UserID INT
+    UserID INT [primary key]
     Nom VARCHAR(200)
+    Prenom VARCHAR(200)
 }
 
 TABLE Maintenance {
     MaintenanceID INT [primary key]
-    Description VARCHAR(250)
     OrdinateurID INT
-    Date TIMESTAMP
+    Description VARCHAR(250)
+    Action VARCHAR(100)
+    DateAction TIMESTAMP
 }
 
 

@@ -1,0 +1,7 @@
+docker stop $(docker ps -q)
+
+./docker_run.sh
+
+cd shared
+
+./dbml2sql.sh
